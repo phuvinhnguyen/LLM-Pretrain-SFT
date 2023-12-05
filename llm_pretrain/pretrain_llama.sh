@@ -2,7 +2,7 @@
 
 echo ===== PRETRAINING =====
 # Node that MODEL_PATH can be local folder path
-MODEL_PATH=/home/reacubeth/models/llama-7b
+MODEL_PATH=npvinHnivqn/llama-500k-beta
 TITLE=llama-7b-pretrain
 DATA=data
 
@@ -25,7 +25,7 @@ torchrun --nproc_per_node=4 --master_port=9919 pretrain.py \
     --logging_steps 50 \
     --save_steps 100 \
     --save_total_limit 1 \
-    --learning_rate 1e-5 \
+    --learning_rate 5e-5 \
     --weight_decay 0. \
     --warmup_ratio 0.03 \
     --lr_scheduler_type "cosine" \
